@@ -115,6 +115,15 @@
       "projectManager": "SONAL",
       "startDate": "2025-04-11",
       "endDate": "2025-04-27"
+    },
+    {
+      "id": "8",
+      "title": "aa",
+      "description": "aa",
+      "createdBy": "aa",
+      "projectManager": "rushiek",
+      "startDate": "2025-04-04",
+      "endDate": "2025-04-04"
     }
   ],
   "tasks": [
@@ -194,17 +203,6 @@
       "estimate": "2 days",
       "timeSpent": "2 days",
       "dueDate": "2025-04-22"
-    },
-    {
-      "id": "a0bc",
-      "projectId": 1,
-      "title": "Frontend done",
-      "assignedTo": "Alice",
-      "status": "In Progress",
-      "priority": "Medium",
-      "estimate": 10,
-      "timeSpent": "3 days",
-      "dueDate": "2025-04-15"
     },
     {
       "id": "d961",
