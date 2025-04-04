@@ -1,0 +1,331 @@
+{
+  "users": [
+    {
+      "id": "3351",
+      "name": "rushi",
+      "email": "Rsui@2535gmail.com",
+      "password": "111333111"
+    },
+    {
+      "id": "9cfa",
+      "name": "mm",
+      "email": "mm@gmail.com",
+      "password": "11223344"
+    },
+    {
+      "id": "6d23",
+      "name": "wai",
+      "email": "wai@gmail.com",
+      "password": "wai123"
+    },
+    {
+      "id": "4d66",
+      "name": "Tejas Borate",
+      "email": "tajas@gmail.com",
+      "password": "112233"
+    },
+    {
+      "id": "56aa",
+      "name": "piyush",
+      "email": "piyush@gmail.com",
+      "password": "112233"
+    },
+    {
+      "id": "1c47",
+      "name": "admin",
+      "email": "admin@wai.com",
+      "password": "wai123"
+    },
+    {
+      "id": "9679",
+      "name": "UTKARSHA",
+      "email": "rushi@2.com",
+      "password": "123456"
+    },
+    {
+      "id": "425b",
+      "name": "admin",
+      "email": "admin@wai.com",
+      "password": "wai123"
+    },
+    {
+      "id": "a8fa",
+      "name": "ganesh",
+      "email": "ganesh@wai.com",
+      "password": "112233"
+    },
+    {
+      "id": "a7b3",
+      "name": "Tejas Borate",
+      "email": "t@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Website Revamp",
+      "description": "Modernize our main site",
+      "createdBy": "Sarah",
+      "projectManager": "John",
+      "startDate": "2025-04-01",
+      "endDate": "2025-06-30"
+    },
+    {
+      "id": "2",
+      "title": "Mobile App Dev",
+      "description": "Create Android & iOS app",
+      "createdBy": "David",
+      "projectManager": "Alice",
+      "startDate": "2025-04-05",
+      "endDate": "2025-07-15"
+    },
+    {
+      "id": "3",
+      "title": "CRM Upgrade",
+      "description": "Update CRM with new UI",
+      "createdBy": "Maya",
+      "projectManager": "Ethan",
+      "startDate": "2025-04-10",
+      "endDate": "2025-06-10"
+    },
+    {
+      "id": "4",
+      "title": "Marketing Push",
+      "description": "Launch new campaigns",
+      "createdBy": "Nina",
+      "projectManager": "Chris",
+      "startDate": "2025-04-15",
+      "endDate": "2025-05-15"
+    },
+    {
+      "id": "5",
+      "title": "Cloud Migration",
+      "description": "Move data to AWS Cloud",
+      "createdBy": "Rushi",
+      "projectManager": "Sonal",
+      "startDate": "2025-04-20",
+      "endDate": "2025-06-20"
+    },
+    {
+      "id": "7",
+      "title": "FRONT ENDD",
+      "description": "THE FRONT ENDD",
+      "createdBy": "rushieks",
+      "projectManager": "SONAL",
+      "startDate": "2025-04-11",
+      "endDate": "2025-04-27"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t003",
+      "projectId": 2,
+      "title": "UI Wireframes",
+      "assignedTo": "Leo",
+      "status": "Open",
+      "priority": "Medium",
+      "estimate": "7 days",
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-12"
+    },
+    {
+      "id": "t004",
+      "projectId": 2,
+      "title": "API Integration",
+      "assignedTo": "Zara",
+      "status": "In Progress",
+      "priority": "High",
+      "estimate": "10 days",
+      "timeSpent": "4 days",
+      "dueDate": "2025-04-20"
+    },
+    {
+      "id": "t005",
+      "projectId": 3,
+      "title": "UI Redesign",
+      "assignedTo": "Raj",
+      "status": "Open",
+      "priority": "Low",
+      "estimate": "6 days",
+      "timeSpent": "0 days",
+      "dueDate": "2025-05-01"
+    },
+    {
+      "id": "t006",
+      "projectId": 3,
+      "title": "Test Migration",
+      "assignedTo": "Eva",
+      "status": "Open",
+      "priority": "Medium",
+      "estimate": "4 days",
+      "timeSpent": "0 days",
+      "dueDate": "2025-05-05"
+    },
+    {
+      "id": "t007",
+      "projectId": 4,
+      "title": "Create Ads",
+      "assignedTo": "Ava",
+      "status": "In Progress",
+      "priority": "High",
+      "estimate": "3 days",
+      "timeSpent": "2 days",
+      "dueDate": "2025-04-18"
+    },
+    {
+      "id": "t008",
+      "projectId": 5,
+      "title": "Migrate DB",
+      "assignedTo": "Dan",
+      "status": "Open",
+      "priority": "High",
+      "estimate": "5 days",
+      "timeSpent": "1 day",
+      "dueDate": "2025-04-25"
+    },
+    {
+      "id": "t009",
+      "projectId": 5,
+      "title": "Backup Check",
+      "assignedTo": "Sam",
+      "status": "Completed",
+      "priority": "Low",
+      "estimate": "2 days",
+      "timeSpent": "2 days",
+      "dueDate": "2025-04-22"
+    },
+    {
+      "id": "a0bc",
+      "projectId": 1,
+      "title": "Frontend done",
+      "assignedTo": "Alice",
+      "status": "In Progress",
+      "priority": "Medium",
+      "estimate": 10,
+      "timeSpent": "3 days",
+      "dueDate": "2025-04-15"
+    },
+    {
+      "id": "d961",
+      "projectId": 1,
+      "title": "project",
+      "assignedTo": "rushikesh",
+      "status": "Open",
+      "priority": "High",
+      "estimate": 5,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-04"
+    },
+    {
+      "id": "b483",
+      "projectId": 1,
+      "title": "project 1",
+      "assignedTo": "rushikesh",
+      "status": "In Progress",
+      "priority": "Low",
+      "estimate": 6,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-11"
+    },
+    {
+      "id": "b36b",
+      "projectId": 1,
+      "title": "Setup Hosting",
+      "assignedTo": "Bobe",
+      "status": "Completed",
+      "priority": "Medium",
+      "estimate": 1,
+      "timeSpent": "1 day",
+      "dueDate": "2025-04-10"
+    },
+    {
+      "id": "4b46",
+      "projectId": 1,
+      "title": "Setup",
+      "assignedTo": "Bob",
+      "status": "Open",
+      "priority": "High",
+      "estimate": 1,
+      "timeSpent": "1 day",
+      "dueDate": "2025-04-10"
+    },
+    {
+      "id": "3c9d",
+      "projectId": 1,
+      "title": "Setup Hosting",
+      "assignedTo": "Bob",
+      "status": "Open",
+      "priority": "High",
+      "estimate": 11,
+      "timeSpent": "1 day",
+      "dueDate": "2025-04-10"
+    },
+    {
+      "id": "4882",
+      "projectId": 6,
+      "title": "task manager",
+      "assignedTo": "kalyan",
+      "status": "In Progress",
+      "priority": "High",
+      "estimate": 10,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-25"
+    },
+    {
+      "id": "75a3",
+      "projectId": 6,
+      "title": "task manager",
+      "assignedTo": "kalyan",
+      "status": "In Progress",
+      "priority": "High",
+      "estimate": 10,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-25"
+    },
+    {
+      "id": "2734",
+      "projectId": 6,
+      "title": "EE",
+      "assignedTo": "AA",
+      "status": "Open",
+      "priority": "Low",
+      "estimate": 10,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-04"
+    },
+    {
+      "id": "0324",
+      "projectId": 6,
+      "title": "EE",
+      "assignedTo": "AA",
+      "status": "Open",
+      "priority": "Low",
+      "estimate": 10,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-04"
+    },
+    {
+      "id": "0c78",
+      "projectId": 6,
+      "title": "RUSHIE",
+      "assignedTo": "RUSH",
+      "status": "Completed",
+      "priority": "Medium",
+      "estimate": 1,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-27"
+    },
+    {
+      "id": "2bbe",
+      "projectId": 7,
+      "title": "rushikesh",
+      "assignedTo": "FGDFG",
+      "status": "Open",
+      "priority": "High",
+      "estimate": 11,
+      "timeSpent": "0 days",
+      "dueDate": "2025-04-25"
+    }
+  ]
+}

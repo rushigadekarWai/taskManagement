@@ -1,0 +1,157 @@
+<div class="container">
+  <h2>Projects</h2>
+
+  <!-- Add Project Button -->
+  <button class="btn primary float-end" (click)="openAddForm()">+ Add Project</button>
+
+  <!-- Add / Edit Project Form -->
+  <div *ngIf="showForm" class="form-container">
+    <h3>{{ isEdit ? 'Edit Project' : 'Add Project' }}</h3>
+
+    <form (ngSubmit)="saveProject()" #projectForm="ngForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input 
+          id="title"
+          type="text" 
+          [(ngModel)]="project.title" 
+          name="title" 
+          required 
+          maxlength="20"
+          #title="ngModel" 
+          [class.invalid]="title.invalid && (title.dirty || title.touched)" 
+          aria-label="Project Title" />
+        <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error-message">
+          Title is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea 
+  id="description"
+  [(ngModel)]="project.description" 
+  name="description" 
+  required 
+  maxlength="35" 
+  #description="ngModel" 
+  [class.invalid]="description.invalid && (description.dirty || description.touched)"
+  aria-label="Project Description"></textarea>
+        <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-message">
+          Description is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="createdBy">Created By</label>
+        <input 
+          id="createdBy"
+          type="text" 
+          [(ngModel)]="project.createdBy" 
+          name="createdBy" 
+          required 
+          maxlength="8"
+          #createdBy="ngModel" 
+          [class.invalid]="createdBy.invalid && (createdBy.dirty || createdBy.touched)" 
+          aria-label="Created By" />
+        <div *ngIf="createdBy.invalid && (createdBy.dirty || createdBy.touched)" class="error-message">
+          Created By is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="projectManager">Project Manager</label>
+        <input 
+          id="projectManager"
+          type="text" 
+          [(ngModel)]="project.projectManager" 
+          name="projectManager" 
+          required 
+          maxlength="10"
+          #projectManager="ngModel" 
+          [class.invalid]="projectManager.invalid && (projectManager.dirty || projectManager.touched)" 
+          aria-label="Project Manager" />
+        <div *ngIf="projectManager.invalid && (projectManager.dirty || projectManager.touched)" class="error-message">
+          Project Manager is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input 
+          id="startDate"
+          type="date" 
+          [(ngModel)]="project.startDate" 
+          name="startDate" 
+          required 
+          #startDate="ngModel" 
+          [class.invalid]="startDate.invalid && (startDate.dirty || startDate.touched)" 
+          aria-label="Start Date" />
+        <div *ngIf="startDate.invalid && (startDate.dirty || startDate.touched)" class="error-message">
+          Start Date is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input 
+          id="endDate"
+          type="date" 
+          [(ngModel)]="project.endDate" 
+          name="endDate" 
+          required 
+          #endDate="ngModel" 
+          [class.invalid]="endDate.invalid && (endDate.dirty || endDate.touched)" 
+          aria-label="End Date" />
+        <div *ngIf="endDate.invalid && (endDate.dirty || endDate.touched)" class="error-message">
+          End Date is required.
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button 
+          type="submit" 
+          class="btn primary" 
+          [disabled]="projectForm.invalid">{{ isEdit ? 'Update' : 'Create' }}</button>
+        <button type="button" class="btn secondary" (click)="closeForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Project List -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <!-- <th>ID</th> -->
+          <th>Title</th>
+          <th>Description</th>
+          <th>Created By</th>
+          <th>Manager</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.title }}</td>
+          <td class="description">{{ project.description }}</td> <!-- Added description class -->
+          <td>{{ project.createdBy }}</td>
+          <td>{{ project.projectManager }}</td>
+          <td>{{ project.startDate }}</td>
+          <td>{{ project.endDate }}</td>
+          <td class="text-center">
+            <button class="btn edit" (click)="openEditForm(project)">Edit</button>
+            <button class="btn delete" (click)="deleteProject(project.id)">Delete</button>
+
+            <!-- <button class="btn view" (click)="viewTasks(project.id)">View Tasks</button> -->
+            <button class="btn view" (click)="viewTasks(project.id, project.title)">View Tasks</button>
+
+          </td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+</div>

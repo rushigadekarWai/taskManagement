@@ -1,0 +1,88 @@
+<div class="task-form">
+  <!-- Back Button -->
+  <div class="form-header">
+    <button class="back-btn" (click)="goBack()">
+      &#8592; Back
+    </button>
+    <!-- <h2>Add Task for Project: {{ projectName }}</h2> -->
+    <h2>{{ isEditMode ? 'Edit Task' : 'Add Task' }}</h2>
+  </div>
+
+  <form #taskForm="ngForm" (ngSubmit)="saveTask()" novalidate>
+
+    <!-- Task Name -->
+    <div class="form-group">
+      <label>Task Name:</label>
+      <input type="text" [(ngModel)]="newTask.title" name="title" #title="ngModel" required />
+      <div class="error" *ngIf="title.invalid && title.touched">Task Name is required.</div>
+    </div>
+
+    <!-- Assigned To -->
+    <div class="form-group">
+      <label>Assigned To:</label>
+      <input type="text" [(ngModel)]="newTask.assignedTo" name="assignedTo" #assignedTo="ngModel" required />
+      <div class="error" *ngIf="assignedTo.invalid && assignedTo.touched">Assigned To is required.</div>
+    </div>
+
+    <!-- Status -->
+    <div class="form-group">
+      <label>Status:</label>
+      <select [(ngModel)]="newTask.status" name="status" #status="ngModel" required>
+        <option value="Open">Open</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <div class="error" *ngIf="status.invalid && status.touched">Please select a status.</div>
+    </div>
+
+    <!-- Priority -->
+    <div class="form-group">
+      <label>Priority:</label>
+      <select [(ngModel)]="newTask.priority" name="priority" #priority="ngModel" required>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <div class="error" *ngIf="priority.invalid && priority.touched">Please select a priority.</div>
+    </div>
+
+    <!-- Estimate -->
+    <div class="form-group">
+      <label>Estimate (days):</label>
+      <input type="number" [(ngModel)]="newTask.estimate" name="estimate" #estimate="ngModel" required min="1" />
+      <div class="error" *ngIf="estimate.invalid && estimate.touched">
+        Estimate is required and must be at least 1 day.
+      </div>
+    </div>
+
+    <!-- Due Date -->
+    <div class="form-group">
+      <label>Due Date:</label>
+      <input type="date" [(ngModel)]="newTask.dueDate" name="dueDate" #dueDate="ngModel" required />
+      <div class="error" *ngIf="dueDate.invalid && dueDate.touched">Please select a valid due date.</div>
+    </div>
+
+    <!-- Hidden Project ID -->
+    <input type="hidden" [(ngModel)]="newTask.projectId" name="projectId" />
+
+    <!-- Submit Button (Disabled if form is invalid) -->
+    <div class="button-container">
+      <!-- <button type="submit" [disabled]="taskForm.invalid">Add Task</button> -->
+      <button type="submit" class="btn btn-primary">
+        {{ isEditMode ? 'Update Task' : 'Save Task' }}
+      </button>
+      
+    </div>
+  </form>
+</div>
+<div #notification class="notification"></div>
+
+<!-- Success Message -->
+<!-- <div *ngIf="successMessage" class="alert alert-success">
+  {{ successMessage }}
+</div>
+
+Error Message -->
+<!-- <div *ngIf="errorMessage" class="alert alert-danger">
+  {{ errorMessage }}
+</div> --> 

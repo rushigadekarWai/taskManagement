@@ -1,0 +1,267 @@
+/* General Styling for the Task Form */
+.task-form {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.back-btn {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #1976D2;
+}
+
+/* Styling for Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-group input[type="date"] {
+  padding: 10px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Button Styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .task-form {
+    padding: 15px;
+  }
+
+  .form-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-form {
+    padding: 10px;
+  }
+
+  .form-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  .task-form {
+    padding: 8px;
+  }
+
+  .form-header h2 {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+}
+
+
+/* Style for the table */
+.table-container {
+  width: 100%;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+/* Ensures that the table uses automatic layout for dynamic content */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  table-layout: auto;  /* Allow columns to auto adjust based on content */
+}
+
+/* Style for the table header and cells */
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word; /* Ensures long text does not overflow */
+  white-space: normal;  /* Allows wrapping of long content */
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fff;
+}
+
+/* Specific styling for the description column */
+td.description {
+  white-space: normal; /* Allow content to wrap */
+  word-wrap: break-word; /* Break long words into the next line if necessary */
+  width: auto; /* Allow it to expand with the content */
+}
+
+/* Alternate row styling */
+tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+
+
+
+.alert {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.success {
+  background-color: #28a745;
+}
+
+.notification.error {
+  background-color: #dc3545;
+}

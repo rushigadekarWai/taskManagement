@@ -1,0 +1,99 @@
+/* Carousel Styles */
+/* Carousel Styles */
+.banner-slide {
+  height: 300px;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.carousel-item {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.8s ease-in-out;
+}
+
+/* Backgrounds for each slide */
+.bg1 {
+  background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+}
+
+.bg2 {
+  background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');
+}
+
+.bg3 {
+  background-image: url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9');
+}
+
+
+
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Adds overlay */
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.carousel h2, .carousel p {
+  color: #fff;
+}
+
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Overview Section */
+.overview-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.overview-card:hover {
+  transform: translateY(-5px);
+}
+.overview-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+/* Intro Section */
+.home-image {
+  max-width: 90%;
+}
+.feature-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Projects Section */
+.project-card {
+  background: #ffffff;
+  border-left: 5px solid #0d6efd;
+  transition: box-shadow 0.3s ease;
+}
+.project-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
