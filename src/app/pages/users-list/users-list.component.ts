@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { PageServiceService } from '../services/page-service.service';
 import { Router } from '@angular/router';
 import { FormsModule, NgModel } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-users-list',
-  imports: [FormsModule, NgFor],
+  imports: [FormsModule, NgFor, NgIf],
   templateUrl: './users-list.component.html',
   styleUrl: './users-list.component.css'
 })
@@ -39,25 +39,25 @@ export class UsersListComponent {
       }
     });
   }
-
+  noResultsFound: boolean = false;
   onSearch(): void {
+
     const query = this.searchQuery.trim().toLowerCase();
-
-    if (!query) {
-      this.filteredUsers = [...this.users];
-      return;
-    }
-
-    this.filteredUsers = this.users.filter(user =>
-      user.name.toLowerCase().includes(query) ||
-      user.email.toLowerCase().includes(query)
-    );
-
-    if (this.filteredUsers.length === 0) {
-      // Navigate to signup if no match found
-      this.router.navigate(['/signup']);
-    }
+  
+  if (!query) {
+    this.filteredUsers = [...this.users];
+    this.noResultsFound = false;
+    return;
   }
+  
+  this.filteredUsers = this.users.filter(user =>
+    user.name.toLowerCase().includes(query)
+  );
+  
+  this.noResultsFound = this.filteredUsers.length === 0;
+  }
+  
+  
 
   sortUsers(key: string): void {
     const direction = this.sortDirection[key] ? 1 : -1;

@@ -63,15 +63,6 @@
   ],
   "projects": [
     {
-      "id": "1",
-      "title": "Website Revamp",
-      "description": "Modernize our main site",
-      "createdBy": "Sarah",
-      "projectManager": "John",
-      "startDate": "2025-04-01",
-      "endDate": "2025-06-30"
-    },
-    {
       "id": "2",
       "title": "Mobile App Dev",
       "description": "Create Android & iOS app",
@@ -128,28 +119,6 @@
   ],
   "tasks": [
     {
-      "id": "t003",
-      "projectId": 2,
-      "title": "UI Wireframes",
-      "assignedTo": "Leo",
-      "status": "Open",
-      "priority": "Medium",
-      "estimate": "7 days",
-      "timeSpent": "0 days",
-      "dueDate": "2025-04-12"
-    },
-    {
-      "id": "t004",
-      "projectId": 2,
-      "title": "API Integration",
-      "assignedTo": "Zara",
-      "status": "In Progress",
-      "priority": "High",
-      "estimate": "10 days",
-      "timeSpent": "4 days",
-      "dueDate": "2025-04-20"
-    },
-    {
       "id": "t005",
       "projectId": 3,
       "title": "UI Redesign",
@@ -187,22 +156,11 @@
       "projectId": 5,
       "title": "Migrate DB",
       "assignedTo": "Dan",
-      "status": "Open",
+      "status": "Completed",
       "priority": "High",
       "estimate": "5 days",
       "timeSpent": "1 day",
       "dueDate": "2025-04-25"
-    },
-    {
-      "id": "t009",
-      "projectId": 5,
-      "title": "Backup Check",
-      "assignedTo": "Sam",
-      "status": "Completed",
-      "priority": "Low",
-      "estimate": "2 days",
-      "timeSpent": "2 days",
-      "dueDate": "2025-04-22"
     },
     {
       "id": "b483",
@@ -302,6 +260,39 @@
       "estimate": 6,
       "timeSpent": "0 days",
       "dueDate": "2025-04-04"
+    },
+    {
+      "id": "2526",
+      "projectId": 8,
+      "title": "RUSHIKESH",
+      "assignedTo": "RUSHIK",
+      "status": "Open",
+      "priority": "Low",
+      "estimate": "11",
+      "timeSpent": "11",
+      "dueDate": "2025-04-05"
+    },
+    {
+      "id": "c8df",
+      "projectId": 2,
+      "title": "update",
+      "assignedTo": "rushiekesh",
+      "status": "Open",
+      "priority": "Medium",
+      "estimate": "1",
+      "timeSpent": "10ht",
+      "dueDate": "2025-04-05"
+    },
+    {
+      "id": "f003",
+      "projectId": 2,
+      "title": "aa",
+      "assignedTo": "aa",
+      "status": "Open",
+      "priority": "Low",
+      "estimate": "ss",
+      "timeSpent": "1",
+      "dueDate": "2025-04-05"
     }
   ]
 }

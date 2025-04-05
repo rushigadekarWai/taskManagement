@@ -1,0 +1,238 @@
+.tasks-container {
+  padding: 30px;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.tasks-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.add-task-btn {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.task-form input,
+.task-form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-actions button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.form-actions button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.tasks-table th {
+  background-color: #343a40;
+  color: white;
+}
+
+.tasks-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.tasks-table button {
+  margin-right: 6px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tasks-table button:first-child {
+  background-color: #ffc107;
+}
+
+.tasks-table button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.no-tasks {
+  font-style: italic;
+  color: #888;
+}
+
+.task-form input,
+.task-form select {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.disabled-btn {
+  background-color: #bbb !important;
+  cursor: not-allowed;
+}
+
+.go-back-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  text-decoration: underline;
+}
+
+.go-back-btn:hover {
+  color: #0056b3;
+}
+.notification {
+  position: fixed;
+  top: 65px;
+  right: 20px;
+  padding: 14px 22px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1050;
+  pointer-events: none;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.success {
+  background: linear-gradient(135deg, #38b000, #70e000);
+}
+
+.notification.error {
+  background: linear-gradient(135deg, #d00000, #ff595e);
+}
+
+.notification.info {
+  background: linear-gradient(135deg, #3a86ff, #00bbf9);
+}
+
+.notification.warning {
+  background: linear-gradient(135deg, #ffb703, #fb8500);
+}
+
+.notification.delete {
+  background: linear-gradient(135deg, #6a040f, #9d0208);
+}
+
+
+/* Table Header: Hover Effect */
+.table th {
+  user-select: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.table th:hover {
+  color: #0d6efd; /* Bootstrap primary */
+  text-decoration: underline;
+}
+
+/* Input Group: Responsive Search Bar */
+.input-group input {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* General Badge Styling */
+.badge {
+  font-size: 0.85rem;
+  padding: 0.35em 0.65em;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Status-specific Badges */
+.badge-open {
+  background-color: #ffc107; /* Bootstrap warning */
+  color: #212529;
+}
+
+.badge-in-progress {
+  background-color: #0d6efd; /* Bootstrap primary */
+  color: #fff;
+}
+
+.badge-completed {
+  background-color: #198754; /* Bootstrap success */
+  color: #fff;
+}

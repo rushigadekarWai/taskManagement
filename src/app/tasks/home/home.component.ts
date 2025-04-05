@@ -67,7 +67,7 @@ export class HomeComponent {
   }
   
   viewProjects() {
-    this.router.navigate(['/projects']);
+    this.router.navigate(['/projects-list']);
   }
   
   viewTasks() {

@@ -7,6 +7,9 @@
     <button class="btn btn-outline-primary" (click)="onSearch()">Search</button>
   </div>
 
+
+  
+
   <!-- Users Table -->
   <table class="table table-bordered table-hover">
     <thead class="table-light">
@@ -24,4 +27,8 @@
       </tr>
     </tbody>
   </table>
+
+  <div *ngIf="noResultsFound" class="alert alert-warning mt-3">
+    No users found with the given name.
+  </div>
 </div>

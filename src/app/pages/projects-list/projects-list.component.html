@@ -1,1 +1,143 @@
-<p>projects-list works!</p>
+<div class="project-list-container">
+  <h2 class="section-title">All Projects</h2>
+
+  <!-- Add Project + Filter Section -->
+  <div class="filter-box">
+    <button class="add-btn" (click)="openAddForm()">+ Add Project</button>
+
+    <select [(ngModel)]="selectedFilterKey" class="filter-select">
+      <option value="title">Title</option>
+      <option value="description">Description</option>
+      <option value="createdBy">Created By</option>
+      <option value="projectManager">Project Manager</option>
+    </select>
+
+    <input
+      type="text"
+      [(ngModel)]="filterText"
+      (input)="applyProjectFilter()"
+      placeholder="Search Projects"
+      class="filter-input"
+    />
+
+    <button class="sort-btn" (click)="toggleSortOrder()">Sort: {{ sortOrder }}</button>
+    <button class="clear-btn" (click)="clearFilter()">Clear</button>
+  </div>
+
+  <!-- Project Table -->
+  <table class="project-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Created By</th>
+        <th>Manager</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of filteredProjects">
+        <td>{{ project['id'] }}</td>
+        <td>{{ project['title'] }}</td>
+        <td>{{ project['description'] }}</td>
+        <td>{{ project['createdBy'] }}</td>
+        <td>{{ project['projectManager'] }}</td>
+        <td>{{ project['startDate'] }}</td>
+        <td>{{ project['endDate'] }}</td>
+        <td class="text-center">
+          <button class="edit-btn" (click)="openEdit(project)">Edit</button>
+          <button class="delete-btn" (click)="deleteProject(project['id'])">Delete</button>
+          <button class="view-btn" (click)="viewTasks(project['id'], project['title'])">View Tasks</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Edit/Add Form -->
+  <div *ngIf="editMode || addMode" class="edit-form">
+    <h3>{{ addMode ? 'Add New Project' : 'Edit Project' }}</h3>
+    
+    <form #projectForm="ngForm" (ngSubmit)="addMode ? addProject() : updateProject()" class="w-100">
+  
+      <input
+        type="text"
+        [(ngModel)]="editableProject['title']"
+        name="title"
+        placeholder="Title"
+        required
+        #title="ngModel"
+        [ngClass]="{ 'invalid': title.invalid && title.touched }"
+      />
+      <div *ngIf="title.invalid && title.touched" class="error-msg">Title is required</div>
+  
+      <input
+        type="text"
+        [(ngModel)]="editableProject['description']"
+        name="description"
+        placeholder="Description"
+        required
+        #description="ngModel"
+        [ngClass]="{ 'invalid': description.invalid && description.touched }"
+      />
+      <div *ngIf="description.invalid && description.touched" class="error-msg">Description is required</div>
+  
+      <input
+        type="text"
+        [(ngModel)]="editableProject['createdBy']"
+        name="createdBy"
+        placeholder="Created By"
+        required
+        #createdBy="ngModel"
+        [ngClass]="{ 'invalid': createdBy.invalid && createdBy.touched }"
+      />
+      <div *ngIf="createdBy.invalid && createdBy.touched" class="error-msg">Created By is required</div>
+  
+      <input
+        type="text"
+        [(ngModel)]="editableProject['projectManager']"
+        name="projectManager"
+        placeholder="Project Manager"
+        required
+        #projectManager="ngModel"
+        [ngClass]="{ 'invalid': projectManager.invalid && projectManager.touched }"
+      />
+      <div *ngIf="projectManager.invalid && projectManager.touched" class="error-msg">Project Manager is required</div>
+  
+      <input
+        type="date"
+        [(ngModel)]="editableProject['startDate']"
+        name="startDate"
+        required
+        #startDate="ngModel"
+        [ngClass]="{ 'invalid': startDate.invalid && startDate.touched }"
+      />
+      <div *ngIf="startDate.invalid && startDate.touched" class="error-msg">Start Date is required</div>
+  
+      <input
+        type="date"
+        [(ngModel)]="editableProject['endDate']"
+        name="endDate"
+        required
+        #endDate="ngModel"
+        [ngClass]="{ 'invalid': endDate.invalid && endDate.touched }"
+      />
+      <div *ngIf="endDate.invalid && endDate.touched" class="error-msg">End Date is required</div>
+  
+      <button type="submit" class="save-btn" [disabled]="projectForm.invalid">
+        {{ addMode ? 'Add' : 'Save' }}
+      </button>
+  
+      <button type="button" class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+  
+
+
+<!-- Toast Notification -->
+<div class="notification-toast" [ngClass]="[notificationClass, showNotification ? 'show' : '']">
+  {{ notificationMessage }}
+</div>
+

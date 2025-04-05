@@ -1,1 +1,182 @@
-<p>users-tasks works!</p>
+<div class="tasks-container">
+  <h2 class="tasks-heading">Tasks for Project: {{ projectName }}</h2>
+  <button class="add-task-btn float-end" (click)="openAddForm()">+ Add Task</button>
+     <!-- Go Back Button (Router based) -->
+<button class="go-back-btn " (click)="goToProjectList()">
+  ← Go Back to Projects
+</button>
+
+  <!-- Add Task Button -->
+  
+
+  <!-- Task Form -->
+  <div *ngIf="addMode || editMode" class="task-form">
+
+
+    <h3>{{ addMode ? 'Add Task' : 'Edit Task' }}</h3>
+  
+    <!-- Attach ngForm to form -->
+    <form #taskForm="ngForm" (ngSubmit)="addMode ? addTask() : updateTask()" novalidate>
+  
+      <!-- Task Title -->
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="editableTask.title"
+        placeholder="Task Title"
+        required
+        #title="ngModel"
+      />
+      <div class="error" *ngIf="title.invalid && (title.touched || title.dirty)">
+        Task title is required.
+      </div>
+  
+      <!-- Assigned To -->
+      <input
+        type="text"
+        name="assignedTo"
+        [(ngModel)]="editableTask.assignedTo"
+        placeholder="Assigned To"
+        required
+        #assignedTo="ngModel"
+      />
+      <div class="error" *ngIf="assignedTo.invalid && (assignedTo.touched || assignedTo.dirty)">
+        Assigned To is required.
+      </div>
+  
+      <!-- Status -->
+      <select
+        name="status"
+        [(ngModel)]="editableTask.status"
+        required
+        #status="ngModel"
+      >
+        <option value="" disabled>Select Status</option>
+        <option>Open</option>
+        <option>In Progress</option>
+        <option>Completed</option>
+      </select>
+      <div class="error" *ngIf="status.invalid && (status.touched || status.dirty)">
+        Status is required.
+      </div>
+  
+      <!-- Priority -->
+      <select
+        name="priority"
+        [(ngModel)]="editableTask.priority"
+        required
+        #priority="ngModel"
+      >
+        <option value="" disabled>Select Priority</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+      <div class="error" *ngIf="priority.invalid && (priority.touched || priority.dirty)">
+        Priority is required.
+      </div>
+  
+      <!-- Estimate -->
+      <input
+        type="text"
+        name="estimate"
+        [(ngModel)]="editableTask.estimate"
+        placeholder="Estimate (e.g., 3 days)"
+        required
+        #estimate="ngModel"
+      />
+      <div class="error" *ngIf="estimate.invalid && (estimate.touched || estimate.dirty)">
+        Estimate is required.
+      </div>
+  
+      <!-- Time Spent (Optional) -->
+      <input
+        type="text"
+        name="timeSpent"
+        [(ngModel)]="editableTask.timeSpent"
+        placeholder="Time Spent"
+      />
+  
+      <!-- Due Date -->
+      <input
+        type="date"
+        name="dueDate"
+        [(ngModel)]="editableTask.dueDate"
+        required
+        #dueDate="ngModel"
+      />
+      <div class="error" *ngIf="dueDate.invalid && (dueDate.touched || dueDate.dirty)">
+        Due Date is required.
+      </div>
+  
+      <!-- Form Buttons -->
+      <div class="form-actions">
+        <button 
+        type="submit" 
+        [disabled]="taskForm.invalid" 
+        [ngClass]="{ 'disabled-btn': taskForm.invalid }"
+      >
+        {{ addMode ? 'Add Task' : 'Update Task' }}
+      </button>
+        <button type="button" (click)="cancelForm()">Cancel</button>
+      </div>
+  
+    </form>
+  </div>
+  
+  
+  
+
+  <!-- Tasks Table -->
+  <div *ngIf="tasks.length === 0" class="no-tasks">No tasks found for this project.</div>
+
+  <table *ngIf="tasks.length > 0" class="tasks-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Assigned To</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Estimate</th>
+        <th>Time Spent</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.id }}</td>
+        <td>{{ task.title }}</td>
+        <td>{{ task.assignedTo }}</td>
+        <td>
+          <span 
+            class="badge"
+            [ngClass]="{
+              'badge-open': task.status === 'Open',
+              'badge-in-progress': task.status === 'In Progress',
+              'badge-completed': task.status === 'Completed'
+            }">
+            {{ task.status }}
+          </span>
+        </td>
+        
+        <td>{{ task.priority }}</td>
+        <td>{{ task.estimate }}</td>
+        <td>{{ task.timeSpent }}</td>
+        <td>{{ task.dueDate }}</td>
+        <td>
+          <button (click)="openEditForm(task)">Edit</button>
+          <button (click)="deleteTask(task.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  *ngIf="showNotification"
+  [class]="notificationClass"
+>
+  {{ notificationMessage }}
+</div>

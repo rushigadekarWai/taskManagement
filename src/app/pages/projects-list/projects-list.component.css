@@ -1,0 +1,315 @@
+.project-list-container {
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-select,
+.filter-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.clear-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.project-table th,
+.project-table td {
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.project-table th {
+  background-color: #343a40;
+  color: white;
+}
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.edit-form {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%; /* ← Add this line */
+  max-width: 100%;
+}
+  /* .edit-form {
+    margin: 25px auto 0 auto; top auto bottom auto ← centers it horizontally
+  } */
+
+.edit-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.edit-form input {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sort-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.project-list-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.filter-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-select,
+.filter-input,
+.add-btn,
+.sort-btn,
+.clear-btn {
+  padding: 6px 12px;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table th,
+.project-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.edit-form {
+  margin-top: 20px;
+}
+
+.edit-form input {
+  display: block;
+  margin: 8px 0;
+  padding: 6px;
+  width: 100%;
+}
+.view-btn {
+  background-color: #3498db; /* Blue tone */
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #2980b9; /* Slightly darker on hover */
+}
+.action-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-left: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #d68910;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.view-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #2980b9;
+}
+.notification-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.notification-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification-toast.success {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.notification-toast.error {
+  background: linear-gradient(135deg, #f44336, #b71c1c);
+}
+
+.notification-toast.delete {
+  background: linear-gradient(135deg, #ff3c38, #b00020);
+}
+
+.notification-toast.warning {
+  background: linear-gradient(135deg, #FFC107, #FF9800);
+}
+
+.notification-toast.info {
+  background: linear-gradient(135deg, #2196F3, #1565C0);
+}
+
+
+/* DELETE Toast (distinct from error) */
+.notification-toast.delete {
+  background: linear-gradient(135deg, #ff3c38, #b00020);
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.4);
+}
+
+input.ng-valid.ng-touched {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+}
+
+.error-msg {
+  color: #dc3545;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.invalid {
+  border: 1px solid #dc3545;
+}
+
+.save-btn:disabled {
+  background-color: #94d3a2;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

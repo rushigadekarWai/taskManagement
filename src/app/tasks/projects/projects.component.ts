@@ -55,43 +55,7 @@ export class ProjectsComponent {
     this.showForm = true;
   }
 
-  // Save project (Add or Update)
-  // saveProject(): void {
-  //   if (this.isEdit) {
-  //     // For editing, ensure the ID is passed as a number for consistency
-  //     const projectId = this.project.id; // ID stays a number for editing
   
-  //     this.projectService.updateProject(projectId, this.project).subscribe(
-  //       () => {
-  //         this.loadProjects();
-  //         this.closeForm();
-  //       },
-  //       (error) => {
-  //         console.error('Error updating project:', error);
-  //         alert('There was an error updating the project.');
-  //       }
-  //     );
-  //   } else {
-  //     this.projectService.getProjects().subscribe((data) => {
-  //       // Get the highest project ID and increment it
-  //       const maxId = data.length > 0 ? Math.max(...data.map((p) => p.id)) : 0;
-  //       this.project.id = maxId + 1;  // ID stays a number
-  
-  //       // Now add the project with the correct id (number)
-  //       this.projectService.addProject(this.project).subscribe(
-  //         (newProject) => {
-  //           this.projects.push(newProject);
-  //           this.closeForm();
-  //         },
-  //         (error) => {
-  //           console.error('Error adding project:', error);
-  //           alert('There was an error adding the project.');
-  //         }
-  //       );
-  //     });
-  //   }
-  // }
-
 
 
   saveProject(): void {
@@ -190,4 +154,17 @@ export class ProjectsComponent {
       endDate: '',
     };
   }
+
+
+  //  filter code---------------------------------------------------------
+
+  
+
+
+
+
+
+
+
+
 }
