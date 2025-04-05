@@ -1,99 +1,193 @@
-/* Carousel Styles */
-/* Carousel Styles */
-.banner-slide {
-  height: 300px;
-  color: white;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-image 0.8s ease-in-out;
+/* Base Theme */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.carousel-item {
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-image 0.8s ease-in-out;
+h2, h3, h5 {
+  color: #212529;
 }
 
-/* Backgrounds for each slide */
-.bg1 {
-  background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+p, li {
+  color: #495057;
 }
 
-.bg2 {
-  background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');
+button, a {
+  transition: all 0.3s ease-in-out;
 }
 
-.bg3 {
-  background-image: url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9');
-}
-
-
-
-
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5); /* Adds overlay */
-  padding: 1rem;
-  border-radius: 10px;
-  color: #fff;
-}
-
-.carousel h2, .carousel p {
-  color: #fff;
-}
-
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-/* Overview Section */
+/* Overview Cards */
 .overview-card {
-  background: #f8f9fa;
+  background-color: #ffffff;
   border-radius: 15px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
+
 .overview-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
+
 .overview-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 15px;
 }
+
 .count {
-  font-size: 28px;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #0d6efd;
+  color: #007bff;
 }
 
 /* Intro Section */
-.home-image {
-  max-width: 90%;
+.home-intro {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
+
+.home-image {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
 .feature-list li {
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Feature Cards */
+.feature-card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Projects Section */
 .project-card {
-  background: #ffffff;
-  border-left: 5px solid #0d6efd;
-  transition: box-shadow 0.3s ease;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
 }
+
 .project-card:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.project-card button {
+  color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-card button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Testimonials Section */
+.testimonial-card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.testimonial-card .text-muted {
+  color: #6c757d;
+}
+
+/* CTA Section */
+.container.text-center h2 {
+  color: #212529;
+}
+
+.container.text-center p {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Off-white background and subtle border for cards like Project & Task */
+.project-card, .task-box, .overview-card, .feature-card, .testimonial-card {
+  background-color: #fdfdfd; /* Soft off-white */
+  border: 1px solid #e4e4e4; /* Light gray border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for subtle lift */
+.project-card:hover,
+.task-box:hover,
+.overview-card:hover,
+.feature-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Optional: task box specific */
+.task-box {
+  margin-bottom: 20px;
+}
+
+/* Inner task card content */
+.task-box h5 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.task-box p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Tag, Priority, or Status badge */
+.task-box .badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: #e9ecef;
+  color: #333;
 }

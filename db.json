@@ -121,9 +121,9 @@
       "title": "aa",
       "description": "aa",
       "createdBy": "aa",
-      "projectManager": "rushiek",
-      "startDate": "2025-04-04",
-      "endDate": "2025-04-04"
+      "projectManager": "aa",
+      "startDate": "2025-04-05",
+      "endDate": "2025-04-05"
     }
   ],
   "tasks": [
@@ -205,17 +205,6 @@
       "dueDate": "2025-04-22"
     },
     {
-      "id": "d961",
-      "projectId": 1,
-      "title": "project",
-      "assignedTo": "rushikesh",
-      "status": "Open",
-      "priority": "High",
-      "estimate": 5,
-      "timeSpent": "0 days",
-      "dueDate": "2025-04-04"
-    },
-    {
       "id": "b483",
       "projectId": 1,
       "title": "project 1",
@@ -245,17 +234,6 @@
       "status": "Open",
       "priority": "High",
       "estimate": 1,
-      "timeSpent": "1 day",
-      "dueDate": "2025-04-10"
-    },
-    {
-      "id": "3c9d",
-      "projectId": 1,
-      "title": "Setup Hosting",
-      "assignedTo": "Bob",
-      "status": "Open",
-      "priority": "High",
-      "estimate": 11,
       "timeSpent": "1 day",
       "dueDate": "2025-04-10"
     },
@@ -315,15 +293,15 @@
       "dueDate": "2025-04-27"
     },
     {
-      "id": "2bbe",
-      "projectId": 7,
-      "title": "rushikesh",
-      "assignedTo": "FGDFG",
+      "id": "6f26",
+      "projectId": 9,
+      "title": "aq`",
+      "assignedTo": "aa",
       "status": "Open",
-      "priority": "High",
-      "estimate": 11,
+      "priority": "Low",
+      "estimate": 6,
       "timeSpent": "0 days",
-      "dueDate": "2025-04-25"
+      "dueDate": "2025-04-04"
     }
   ]
 }
