@@ -191,3 +191,48 @@ button, a {
   background-color: #e9ecef;
   color: #333;
 }
+
+/* Clock container */
+.clock-container {
+  position: relative;
+}
+
+/* Clock box */
+.clock-box {
+  background-color: #f8f9fa; /* light gray background */
+  border-left: 4px solid #0d6efd; /* Bootstrap primary blue */
+  min-width: 180px;
+  max-width: 220px;
+}
+
+/* Time styling */
+.clock-time {
+  font-size: 1.25rem;
+  color: #212529;
+}
+
+/* Date styling */
+.clock-date {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Optional: Add responsive behavior */
+@media (max-width: 576px) {
+  .clock-box {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .clock-container {
+    justify-content: center !important;
+  }
+
+  .clock-time {
+    font-size: 1.1rem;
+  }
+
+  .clock-date {
+    font-size: 0.8rem;
+  }
+}

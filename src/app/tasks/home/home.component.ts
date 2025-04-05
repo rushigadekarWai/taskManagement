@@ -28,6 +28,7 @@ export class HomeComponent {
     this.fetchTotalUsers();
     this.fetchTotalProjects();
     this.fetchTotalTasks();
+    this.updateClock();
   }
 
   fetchTotalUsers(){
@@ -73,6 +74,30 @@ export class HomeComponent {
     this.router.navigate(['/users-tasks']);
   }
   
-
+  updateClock(): void {
+    setInterval(() => {
+      const now = new Date();
+      const time = now.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      });
+  
+      const date = now.toLocaleDateString(undefined, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+  
+      const timeEl = document.getElementById('clock-time');
+      const dateEl = document.getElementById('clock-date');
+  
+      if (timeEl && dateEl) {
+        timeEl.innerText = time;
+        dateEl.innerText = date;
+      }
+    }, 1000);}
  
 }

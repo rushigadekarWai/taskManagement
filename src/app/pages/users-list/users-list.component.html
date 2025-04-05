@@ -1,1 +1,27 @@
-<p>users-list works!</p>
+<div class="container my-4">
+  <h2 class="mb-3">User List</h2>
+
+  <!-- Search Bar -->
+  <div class="input-group mb-3">
+    <input [(ngModel)]="searchQuery" type="text" class="form-control" placeholder="Search by name or email" />
+    <button class="btn btn-outline-primary" (click)="onSearch()">Search</button>
+  </div>
+
+  <!-- Users Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th (click)="sortUsers('name')" style="cursor: pointer;">Name</th>
+        <th (click)="sortUsers('email')" style="cursor: pointer;">Email</th>
+        <th (click)="sortUsers('id')" style="cursor: pointer;">User ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td><span class="text-muted">{{ user.id }}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
