@@ -106,15 +106,6 @@
       "projectManager": "SONAL",
       "startDate": "2025-04-11",
       "endDate": "2025-04-27"
-    },
-    {
-      "id": "8",
-      "title": "aa",
-      "description": "aa",
-      "createdBy": "aa",
-      "projectManager": "aa",
-      "startDate": "2025-04-05",
-      "endDate": "2025-04-05"
     }
   ],
   "tasks": [
@@ -262,17 +253,6 @@
       "dueDate": "2025-04-04"
     },
     {
-      "id": "2526",
-      "projectId": 8,
-      "title": "RUSHIKESH",
-      "assignedTo": "RUSHIK",
-      "status": "Open",
-      "priority": "Low",
-      "estimate": "11",
-      "timeSpent": "11",
-      "dueDate": "2025-04-05"
-    },
-    {
       "id": "c8df",
       "projectId": 2,
       "title": "update",
@@ -281,17 +261,6 @@
       "priority": "Medium",
       "estimate": "1",
       "timeSpent": "10ht",
-      "dueDate": "2025-04-05"
-    },
-    {
-      "id": "f003",
-      "projectId": 2,
-      "title": "aa",
-      "assignedTo": "aa",
-      "status": "Open",
-      "priority": "Low",
-      "estimate": "ss",
-      "timeSpent": "1",
       "dueDate": "2025-04-05"
     }
   ]
